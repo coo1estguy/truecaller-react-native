@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "truecaller-react-native-example",
+    "slug": "truecaller-react-native-example",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "expo.modules.truecallerreactnative.example"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "expo.modules.truecallerreactnative.example"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "../app.plugin.js",
+        {
+          "iosAppKey": "YOUR_IOS_APP_KEY",
+          "iosAppLink": "https://your.app.link",
+          "androidClientId": "n8en40mtl5zewhezkapbmoy4surogglnhvyiuizrx08"
+        }
+      ]
+    ]
+  }
+}

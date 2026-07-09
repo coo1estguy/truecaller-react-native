@@ -1,0 +1,50 @@
+/**
+ * All known error codes from the Truecaller SDK and this module.
+ *
+ * Android SDK error codes are mapped from numeric values to explicit `ERR_`
+ * prefixed semantic names on the native side.
+ * iOS error codes use the same `ERR_` prefix via `promise.reject()`.
+ */
+export const TruecallerErrorCodes = {
+  // User-initiated cancellations
+  USER_CANCELLED: "ERR_USER_CANCELLED",
+  USER_DISMISSED: "ERR_USER_DISMISSED",
+  USER_PRESSED_BACK: "ERR_USER_PRESSED_BACK",
+
+  // Availability
+  NOT_INSTALLED: "ERR_NOT_INSTALLED",
+  NOT_AVAILABLE: "ERR_NOT_AVAILABLE",
+
+  // SDK errors
+  SDK_ERROR: "ERR_SDK_ERROR",
+  SDK_TOO_OLD: "ERR_SDK_TOO_OLD",
+  MISSING_CLIENT_ID: "ERR_MISSING_CLIENT_ID",
+  VERIFICATION_REQUIRED: "ERR_VERIFICATION_REQUIRED",
+  NETWORK_FAILURE: "ERR_NETWORK_FAILURE",
+  UNKNOWN_ERROR: "ERR_UNKNOWN_ERROR",
+
+  // Module-level errors
+  NOT_INITIALIZED: "ERR_NOT_INITIALIZED",
+  NO_ACTIVITY: "ERR_NO_ACTIVITY",
+  ACTIVITY_DESTROYED: "ERR_ACTIVITY_DESTROYED",
+  LAUNCHER_NOT_REGISTERED: "ERR_LAUNCHER_NOT_REGISTERED",
+  PKCE_FAILED: "ERR_PKCE_FAILED",
+  CLEARED: "ERR_CLEARED",
+  INIT_FAILED: "ERR_INIT_FAILED",
+  RESULT_ERROR: "ERR_RESULT_ERROR",
+  VERIFICATION_FAILED: "ERR_VERIFICATION_FAILED",
+  ALREADY_IN_PROGRESS: "ERR_ALREADY_IN_PROGRESS",
+  MODULE_DESTROYED: "ERR_MODULE_DESTROYED",
+
+  // iOS-specific
+  IOS_APP_KEY_MISSING: "ERR_IOS_APP_KEY_MISSING",
+  IOS_APP_LINK_MISSING: "ERR_IOS_APP_LINK_MISSING",
+  IOS_USER_NOT_SIGNED_IN: "ERR_IOS_USER_NOT_SIGNED_IN",
+  IOS_UNAUTHORIZED_DEVELOPER: "ERR_IOS_UNAUTHORIZED_DEVELOPER",
+  IOS_UNIVERSAL_LINK_FAILED: "ERR_IOS_UNIVERSAL_LINK_FAILED",
+  IOS_URL_SCHEME_MISSING: "ERR_IOS_URL_SCHEME_MISSING",
+} as const;
+
+/** Union of all possible Truecaller error codes. */
+export type TruecallerErrorCode =
+  (typeof TruecallerErrorCodes)[keyof typeof TruecallerErrorCodes];

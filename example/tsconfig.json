@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "truecaller-react-native": ["../src/index"],
+      "truecaller-react-native/*": ["../src/*"]
+    }
+  }
+}

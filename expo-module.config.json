@@ -1,0 +1,10 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["TruecallerReactNativeModule"],
+    "appDelegateSubscribers": ["TruecallerAppDelegateSubscriber"]
+  },
+  "android": {
+    "modules": ["expo.modules.truecaller.TruecallerReactNativeModule"]
+  }
+}
